@@ -39,33 +39,68 @@
       <li>Лікування очних хвороб</li>
     </ul>
 
-    <h3>Прайс</h3>
-    <table class="price-table">
-      <tr>
-        <th>Послуга</th>
-        <th>Ціна (грн)</th>
-      </tr>
-      <tr>
-        <td>Консультація</td>
-        <td>500</td>
-      </tr>
-      <tr>
-        <td>Діагностика</td>
-        <td>1000</td>
-      </tr>
+    <h3 class="section-title">Прайс</h3>
+<table class="price-table">
+  <thead>
+    <tr>
+      <th>Послуга</th>
+      <th>Ціна (грн)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Консультація лікаря</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>Діагностика зору</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>Підбір окулярів</td>
+      <td>400</td>
+    </tr>
+    <tr>
+      <td>Контактні лінзи (1 пара)</td>
+      <td>350</td>
+    </tr>
+  </tbody>
+</table>
+
     </table>
 
-    <h3>Запис на прийом</h3>
-    <form>
-      <label>Ім’я: <input type="text" name="name"></label><br><br>
-      <label>Телефон: <input type="tel" name="phone"></label><br><br>
-      <label>Коментар: <br><textarea name="comment"></textarea></label><br><br>
-      <button type="submit">Записатися</button>
-    </form>
+    <h3 class="section-title">Запис на прийом</h3>
+<form class="appointment-form">
+  <label for="name">Ім’я</label>
+  <input type="text" id="name" name="name" placeholder="Введіть ваше ім’я" required>
 
-    <h3>Контактна інформація</h3>
-    <p><u>Телефон:</u> +380 63 277 5402<br>
-    <u>Email:</u> optica@example.com</p>
+  <label for="phone">Телефон</label>
+  <input type="tel" id="phone" name="phone" placeholder="+380..." required>
+
+  <label for="comment">Коментар</label>
+  <textarea id="comment" name="comment" placeholder="Вкажіть деталі або питання"></textarea>
+
+  <button type="submit">Записатися</button>
+</form>
+
+
+        <h3 class="section-title">Контактна інформація</h3>
+<div class="contact-info">
+  <p><strong>Телефон:</strong> <a href="tel:+380632775402">+380 63 277 5402</a></p>
+  <p><strong>Email:</strong> <a href="mailto:optica@example.com">optica@example.com</a></p>
+  <p>
+    <strong>Instagram:</strong>
+    <a href="https://www.instagram.com/1ksstch" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="icon"> @1ksstch
+    </a>
+  </p>
+  <p>
+    <strong>Telegram:</strong>
+    <a href="https://t.me/ksstch" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" class="icon"> @ksstch
+    </a>
+  </p>
+</div>
 
     <h3>Галерея</h3>
     <img src="https://uamedtours.com.ua/storage/images/453de7a2f468ba61756d386a4fc3cfa8.jpg" alt="Клініка" width="400">

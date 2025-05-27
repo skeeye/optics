@@ -130,3 +130,124 @@ img, iframe {
   background-position: center;
   background-size: cover;
 }
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 60px;
+  color: #2a2a2a;
+}
+
+.price-table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.price-table thead {
+  background-color: #0077cc;
+  color: white;
+}
+
+.price-table th,
+.price-table td {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+.price-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.price-table tr:hover {
+  background-color: #e6f2ff;
+  transition: background-color 0.3s;
+}
+.appointment-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #f9fcff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 119, 204, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.appointment-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.appointment-form input,
+.appointment-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+.appointment-form input:focus,
+.appointment-form textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+.appointment-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.appointment-form button {
+  padding: 12px 20px;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.appointment-form button:hover {
+  background-color: #005fa3;
+}
+.contact-info {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  background-color: #f4faff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 119, 204, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.contact-info p {
+  margin: 12px 0;
+}
+
+.contact-info a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #005fa3;
+  text-decoration: underline;
+}
+
+.contact-info .icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
