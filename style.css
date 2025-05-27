@@ -85,3 +85,27 @@ img, iframe {
   display: block;
   margin: 20px auto;
 }
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode ul li {
+  background-color: #444;
+}
+
+.dark-mode .description {
+  background-color: #333;
+  border-left-color: #4fc3f7;
+}
+
+.dark-mode table {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode input, .dark-mode textarea, .dark-mode button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #888;
+}
