@@ -1,9 +1,4 @@
 
-window.onload = function () {
-  alert("Ласкаво просимо до Оптика Центр Зору!");
-};
-
-
 function toggleTheme() {
   const body = document.body;
   body.classList.toggle("dark-mode");

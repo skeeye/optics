@@ -2,24 +2,34 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Оптика Центр Зору</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Паралакс банер -->
+  <header class="parallax-banner">
+  <h1>Оптика Центр Зору</h1>
+</header>
+
   <div class="container">
 
     <h1 class="main-heading">Приватна Клініка "Оптика Центр Зору"</h1>
 
-    <ul>
-      <li>Головна</li>
-      <li>Про нас</li>
-      <li>Послуги</li>
-      <li>Контакти</li>
-    </ul>
+    <ul class="menu">
+  <li><a href="index.html">Головна</a></li>
+  <li><a href="about.html">Про нас</a></li>
+  <li><a href="services.html">Послуги</a></li>
+  <li><a href="contact.html">Контакти</a></li>
+</ul>
+
 
     <h2>Про нас</h2>
     <p class="description">Ми <strong>сучасна офтальмологічна клініка</strong>, яка надає <em>повний спектр</em> послуг з діагностики та лікування зору. Наші лікарі мають великий досвід та працюють на новітньому обладнанні.</p>
+
+    <!-- Паралакс зображення між секціями -->
+   <section class="parallax-img"></section>
 
     <h3>Напрями роботи</h3>
     <ul class="work-list">
@@ -64,11 +74,12 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/7lJXCP8sDyg" title="YouTube video" frameborder="0" allowfullscreen></iframe>
 
   </div>
-<!-- Кнопка для перемикання теми -->
-<button id="theme-btn" onclick="toggleTheme()">Увімкнути темну тему</button>
 
-<!-- Підключення JS -->
-<script src="script.js"></script>
+  <!-- Кнопка для перемикання теми -->
+  <button id="theme-btn" onclick="toggleTheme()">Увімкнути темну тему</button>
+
+  <!-- Підключення JS -->
+  <script src="script.js"></script>
 
 </body>
 </html>
