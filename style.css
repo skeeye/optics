@@ -493,3 +493,46 @@ body.light-mode .appointment-button {
 body.light-mode .appointment-button:hover {
   background-color: #009688;
 }
+/* Паралакс для мобільних: заміна на псевдо-ефект */
+@media (max-width: 768px) {
+  .parallax-banner {
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .parallax-banner .overlay {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .parallax-banner h1 {
+    font-size: 2rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .nav-menu li a {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .appointment-button {
+    font-size: 14px;
+    padding: 0.6rem 1rem;
+    border-radius: 25px;
+  }
+
+  .appointment-button .icon {
+    font-size: 1.4rem;
+  }
+
+  #toggle-theme {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
