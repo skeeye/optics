@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Галерея | Центр Зору</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-section h2 {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 2rem;
+    }
+
+    .gallery-section p {
+      text-align: center;
+      max-width: 700px;
+      margin: 1rem auto;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    body.light-mode .gallery-section p {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Меню без "Галерея" -->
+  <ul class="nav-menu">
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="about.html">Про нас</a></li>
+    <li><a href="services.html">Послуги</a></li>
+    <li><a href="reviews.html">Відгуки</a></li>
+    <li><a href="blog.html">Блог</a></li>
+    <li><a href="video.html">Відео</a></li>
+    <li><a href="contact.html">Контакти</a></li>
+  </ul>
+
+  <!-- Галерея -->
+  <section class="gallery-section">
+    <h2>Галерея Центру Зору</h2>
+    <p>Ознайомтесь із атмосферою нашої клініки, обладнанням та щасливими пацієнтами, які довірили нам свій зір.</p>
+
+    <div class="gallery-grid">
+      <img src="https://source.unsplash.com/400x300/?eye,clinic" alt="Фото клініки" />
+      <img src="https://source.unsplash.com/400x300/?optometry" alt="Обстеження зору" />
+      <img src="https://source.unsplash.com/400x300/?glasses,shop" alt="Окуляри" />
+      <img src="https://source.unsplash.com/400x300/?eye,checkup" alt="Перевірка зору" />
+      <img src="https://source.unsplash.com/400x300/?ophthalmology" alt="Офтальмолог" />
+      <img src="https://source.unsplash.com/400x300/?contact,lens" alt="Лінзи" />
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="site-footer">
+    &copy; 2025 Оптика Центр Зору. Всі права захищено.
+  </footer>
+
+  <!-- Кнопка зміни теми -->
+  <button id="toggle-theme">Змінити тему</button>
+
+  <!-- Скрипт теми -->
+  <script>
+    document.getElementById('toggle-theme').addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Блог | Центр Зору</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .blog-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-post {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .blog-post h3 {
+      margin-top: 0;
+      color: #f2f2f2;
+    }
+
+    .blog-post p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .blog-post small {
+      display: block;
+      margin-top: 0.5rem;
+      color: #888;
+    }
+
+    body.light-mode .blog-post {
+      background-color: #fdfdfd;
+      color: #000;
+    }
+
+    body.light-mode .blog-post p {
+      color: #333;
+    }
+
+    body.light-mode .blog-post small {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Меню без "Блог" -->
+  <ul class="nav-menu">
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="about.html">Про нас</a></li>
+    <li><a href="services.html">Послуги</a></li>
+    <li><a href="reviews.html">Відгуки</a></li>
+    <li><a href="gallery.html">Галерея</a></li>
+    <li><a href="video.html">Відео</a></li>
+    <li><a href="contact.html">Контакти</a></li>
+  </ul>
+
+  <!-- Блог -->
+  <section class="blog-section">
+    <h2>Блог Центру Зору</h2>
+
+    <div class="blog-post">
+      <h3>Як зберегти зір під час роботи за комп’ютером?</h3>
+      <p>
+        Більшість з нас проводить по 6-8 годин перед екранами. Щоб уникнути втоми очей, використовуйте правило 20-20-20:
+        кожні 20 хвилин дивіться на об'єкт на відстані 20 футів протягом 20 секунд.
+      </p>
+      <small>Опубліковано: 10 травня 2025</small>
+    </div>
+
+    <div class="blog-post">
+      <h3>Чому важливо регулярно перевіряти зір?</h3>
+      <p>
+        Регулярні обстеження допомагають виявити проблеми на ранньому етапі, що дозволяє ефективно їх лікувати. 
+        Навіть якщо немає скарг, профілактика — найкращий захист.
+      </p>
+      <small>Опубліковано: 3 травня 2025</small>
+    </div>
+
+    <div class="blog-post">
+      <h3>Окуляри чи лінзи — що краще?</h3>
+      <p>
+        Все залежить від вашого стилю життя та медичних показань. Лінзи зручні для спорту, але вимагають ретельного догляду.
+        Окуляри — простіші у використанні та додають стилю.
+      </p>
+      <small>Опубліковано: 25 квітня 2025</small>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="site-footer">
+    &copy; 2025 Оптика Центр Зору. Всі права захищено.
+  </footer>
+
+  <!-- Кнопка теми -->
+  <button id="toggle-theme">Змінити тему</button>
+
+  <script>
+    document.getElementById('toggle-theme').addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+    });
+  </script>
+</body>
+</html>

@@ -1,120 +1,94 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Оптика Центр Зору</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- Паралакс банер -->
   <header class="parallax-banner">
-  <h1>Оптика Центр Зору</h1>
-</header>
+    <div class="overlay">
+      <h1>Оптика Центр Зору</h1>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="services.html">Послуги</a></li>
+          <li><a href="reviews.html">Відгуки</a></li>
+          <li><a href="blog.html">Блог</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="video.html">Відео</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <div class="container">
+  <!-- Інформація про клініку -->
+  <section class="about-clinic">
+    <div class="container">
+      <h2>Про клініку</h2>
+      <p>
+        Ми — сучасний медичний центр, який спеціалізується на діагностиці та корекції зору. 
+        Наша місія — забезпечити кожному пацієнту якісне обслуговування та комфорт.
+      </p>
+      <p>
+        Використовуємо новітнє обладнання, працюємо з кваліфікованими спеціалістами 
+        та гарантуємо індивідуальний підхід до кожного клієнта.
+      </p>
+    </div>
+  </section>
 
-    <h1 class="main-heading">Приватна Клініка "Оптика Центр Зору"</h1>
+  <!-- Футер -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Оптика Центр Зору. Усі права захищені.</p>
+  </footer>
 
-    <ul class="menu">
-  <li><a href="index.html">Головна</a></li>
-  <li><a href="about.html">Про нас</a></li>
-  <li><a href="services.html">Послуги</a></li>
-  <li><a href="contact.html">Контакти</a></li>
-</ul>
+  <!-- Кнопка зміни теми -->
+  <button id="toggle-theme"> Змінити тему</button>
 
-
-    <h2>Про нас</h2>
-    <p class="description">Ми <strong>сучасна офтальмологічна клініка</strong>, яка надає <em>повний спектр</em> послуг з діагностики та лікування зору. Наші лікарі мають великий досвід та працюють на новітньому обладнанні.</p>
-
-    <!-- Паралакс зображення між секціями -->
-   <section class="parallax-img"></section>
-
-    <h3>Напрями роботи</h3>
-    <ul class="work-list">
-      <li>Діагностика зору</li>
-      <li>Підбір окулярів</li>
-      <li>Контактні лінзи</li>
-      <li>Лікування очних хвороб</li>
-    </ul>
-
-    <h3 class="section-title">Прайс</h3>
-<table class="price-table">
-  <thead>
-    <tr>
-      <th>Послуга</th>
-      <th>Ціна (грн)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Консультація лікаря</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>Діагностика зору</td>
-      <td>1000</td>
-    </tr>
-    <tr>
-      <td>Підбір окулярів</td>
-      <td>400</td>
-    </tr>
-    <tr>
-      <td>Контактні лінзи (1 пара)</td>
-      <td>350</td>
-    </tr>
-  </tbody>
-</table>
-
-    </table>
-
-    <h3 class="section-title">Запис на прийом</h3>
-<form class="appointment-form">
-  <label for="name">Ім’я</label>
-  <input type="text" id="name" name="name" placeholder="Введіть ваше ім’я" required>
-
-  <label for="phone">Телефон</label>
-  <input type="tel" id="phone" name="phone" placeholder="+380..." required>
-
-  <label for="comment">Коментар</label>
-  <textarea id="comment" name="comment" placeholder="Вкажіть деталі або питання"></textarea>
-
-  <button type="submit">Записатися</button>
-</form>
-
-
-    <h3>Галерея</h3>
-    <img src="https://uamedtours.com.ua/storage/images/453de7a2f468ba61756d386a4fc3cfa8.jpg" alt="Клініка" width="900">
-
-    <h3>Відео про клініку</h3>
-    <iframe width="900" height="315" src="https://www.youtube.com/embed/7lJXCP8sDyg" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-
-  </div>
-
-      <h3 class="section-title">Контактна інформація</h3>
-<div class="contact-info">
-  <p><strong>Телефон:</strong> <a href="tel:+380632775402">+380 63 277 5402</a></p>
-  <p><strong>Email:</strong> <a href="mailto:optica@example.com">optica@example.com</a></p>
-  <p>
-    <strong>Instagram:</strong>
-    <a href="https://www.instagram.com/1ksstch" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="icon"> @1ksstch
-    </a>
-  </p>
-  <p>
-    <strong>Telegram:</strong>
-    <a href="https://t.me/ksstch" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" class="icon"> @ksstch
-    </a>
-  </p>
-</div>
-
-  <!-- Кнопка для перемикання теми -->
-  <button id="theme-btn" onclick="toggleTheme()">Увімкнути темну тему</button>
-
-  <!-- Підключення JS -->
+  <!-- Підключення скрипта -->
   <script src="script.js"></script>
+  <!-- Кнопка "Записатись на прийом" -->
+<!-- Кнопка "Запис на прийом" -->
+<button class="appointment-button" onclick="openModal()" title="Запис на прийом">
+  <span class="icon">📅</span>
+  <span class="label">Записатись</span>
+</button>
+
+
+<!-- Модальне вікно -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Записатись на прийом</h2>
+    <form class="appointment-form">
+      <input type="text" placeholder="Ваше ім’я" required />
+      <input type="tel" placeholder="Номер телефону" required />
+      <input type="email" placeholder="Email (необов’язково)" />
+      <textarea placeholder="Коментар або питання..." rows="4"></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </div>
+</div>
+<script>
+  function openModal() {
+    document.getElementById("modal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
+  // Закрити по кліку за межами вікна
+  window.onclick = function (event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  };
+</script>
 
 </body>
 </html>

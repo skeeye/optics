@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Відео | Центр Зору</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .video-section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .video-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .video-section p {
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-grid iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    body.light-mode .video-section p {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Меню без "Відео" -->
+  <ul class="nav-menu">
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="about.html">Про нас</a></li>
+    <li><a href="services.html">Послуги</a></li>
+    <li><a href="reviews.html">Відгуки</a></li>
+    <li><a href="blog.html">Блог</a></li>
+    <li><a href="gallery.html">Галерея</a></li>
+    <li><a href="contact.html">Контакти</a></li>
+  </ul>
+
+  <!-- Відео розділ -->
+  <section class="video-section">
+    <h2>Наші відео</h2>
+    <p>Ознайомтеся з діяльністю нашої клініки, обладнанням та реальними історіями наших клієнтів.</p>
+
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/l7kJKbsXAho" title="Огляд обладнання"></iframe>
+      <iframe src="https://www.youtube.com/embed/Fa9XI8zE0ss" title="Процес перевірки зору"></iframe>
+      <iframe src="https://www.youtube.com/embed/ZIfUQd93MFA" title="Відгуки пацієнтів"></iframe>
+      <iframe src="https://www.youtube.com/embed/Y9XjU9D9Er8" title="Інтерв'ю з лікарем"></iframe>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="site-footer">
+    &copy; 2025 Оптика Центр Зору. Всі права захищено.
+  </footer>
+
+  <!-- Кнопка зміни теми -->
+  <button id="toggle-theme">Змінити тему</button>
+
+  <!-- Скрипт теми -->
+  <script>
+    document.getElementById('toggle-theme').addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,23 +1,119 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Контакти — Оптика Центр Зору</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Контакти | Центр Зору</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .contact-card {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-card h3 {
+      margin-bottom: 0.5rem;
+      color: #f2f2f2;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      color: #ccc;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    body.light-mode .contact-card {
+      background-color: #fff;
+      color: #000;
+    }
+
+    body.light-mode .contact-card p,
+    body.light-mode .contact-card a {
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <ul class="menu">
-      <li><a href="index.html">Головна</a></li>
-      <li><a href="about.html">Про нас</a></li>
-      <li><a href="services.html">Послуги</a></li>
-      <li><a href="contact.html">Контакти</a></li>
-    </ul>
 
-    <h1>Контактна інформація</h1>
-    <p><strong>Адреса:</strong> вул. Медична, 12, Київ<br>
-    <strong>Телефон:</strong> +380 63 277 5402<br>
-    <strong>Email:</strong> optica@example.com</p>
-  </div>
+  <!-- Меню без "Контакти" -->
+  <ul class="nav-menu">
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="about.html">Про нас</a></li>
+    <li><a href="services.html">Послуги</a></li>
+    <li><a href="reviews.html">Відгуки</a></li>
+    <li><a href="blog.html">Блог</a></li>
+    <li><a href="gallery.html">Галерея</a></li>
+    <li><a href="video.html">Відео</a></li>
+  </ul>
+
+  <!-- Контакти -->
+  <section class="contact-section">
+    <h2>Зв'яжіться з нами</h2>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Телефон</h3>
+        <p>+380 (67) 123 45 67</p>
+        <p>+380 (50) 987 65 43</p>
+      </div>
+      <div class="contact-card">
+        <h3>Email</h3>
+        <p><a href="mailto:optica@center.com">optica@center.com</a></p>
+      </div>
+      <div class="contact-card">
+        <h3>Instagram</h3>
+        <p><a href="https://www.instagram.com/1ksstch?igsh=MW5teXZxdGpvcGNtMg==" target="_blank">@1ksstch</a></p>
+      </div>
+      <div class="contact-card">
+        <h3>Telegram</h3>
+        <p><a href="https://t.me/ksstch" target="_blank">@ksstch</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="site-footer">
+    &copy; 2025 Оптика Центр Зору. Всі права захищено.
+  </footer>
+
+  <!-- Кнопка зміни теми -->
+  <button id="toggle-theme">Змінити тему</button>
+
+  <script>
+    document.getElementById('toggle-theme').addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+    });
+  </script>
 </body>
 </html>

@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Про нас — Оптика Центр Зору</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Про нас | Центр Зору</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <ul class="menu">
-      <li><a href="index.html">Головна</a></li>
-      <li><a href="about.html">Про нас</a></li>
-      <li><a href="services.html">Послуги</a></li>
-      <li><a href="contact.html">Контакти</a></li>
-    </ul>
+  <!-- Меню навігації -->
+  <ul class="nav-menu" id="nav-menu">
+    <li><a href="index.html" data-page="index.html">Головна</a></li>
+    <li><a href="about.html" data-page="about.html">Про нас</a></li>
+    <li><a href="services.html" data-page="services.html">Послуги</a></li>
+    <li><a href="reviews.html" data-page="reviews.html">Відгуки</a></li>
+    <li><a href="blog.html" data-page="blog.html">Блог</a></li>
+    <li><a href="gallery.html" data-page="gallery.html">Галерея</a></li>
+    <li><a href="video.html" data-page="video.html">Відео</a></li>
+    <li><a href="contact.html" data-page="contact.html">Контакти</a></li>
+  </ul>
 
-    <h1>Про нашу клініку</h1>
-    <p>Ми — сучасний медичний центр, який спеціалізується на збереженні та покращенні зору...</p>
-  </div>
+  <!-- Контент сторінки -->
+  <section class="about-clinic">
+    <h2>Про нашу клініку</h2>
+    <p>
+      Ми — сучасний медичний центр, який спеціалізується на збереженні та покращенні зору.
+      Наша команда складається з висококваліфікованих лікарів-офтальмологів з багаторічним досвідом.
+    </p>
+    <p>
+      Ми пропонуємо широкий спектр послуг: від комп'ютерної діагностики зору до підбору окулярів
+      і контактних лінз. У своїй роботі ми використовуємо сучасне обладнання та індивідуальний підхід до кожного пацієнта.
+    </p>
+  </section>
+
+  <!-- Футер -->
+  <footer class="site-footer">
+    &copy; 2025 Оптика Центр Зору. Всі права захищено.
+  </footer>
+
+  <!-- Кнопка зміни теми -->
+  <button id="toggle-theme">Змінити тему</button>
+
+  <!-- Скрипти -->
+  <script>
+    const toggleButton = document.getElementById('toggle-theme');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+    });
+
+    const currentPage = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+      if (link.getAttribute('data-page') === currentPage) {
+        link.parentElement.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
