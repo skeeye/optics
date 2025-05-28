@@ -87,6 +87,23 @@
       document.body.classList.toggle('light-mode');
     });
   </script>
+<script>
+  const banner = document.getElementById("parallax-banner");
+
+  function handleParallax() {
+    const scrollY = window.scrollY;
+    const isMobile = window.innerWidth <= 768;
+
+    if (!isMobile) {
+      banner.style.transform = `translateY(${scrollY * 0.3}px)`;
+    } else {
+      banner.style.transform = `translateY(0px)`; // Вимикаємо ефект
+    }
+  }
+
+  window.addEventListener("scroll", handleParallax);
+  window.addEventListener("resize", handleParallax);
+</script>
 
 </body>
 </html>

@@ -536,3 +536,11 @@ body.light-mode .appointment-button:hover {
     padding: 0.5rem 0.8rem;
   }
 }
+.parallax-banner {
+  background-image: url("..."); /* твоя картинка */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
