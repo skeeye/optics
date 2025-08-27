@@ -39,7 +39,58 @@
       </p>
     </div>
   </section>
+  <!-- ...після секції про клініку... -->
+</section>
 
+<section>
+  <h2>Залишити заявку на прийом</h2>
+  <form id="appointment-form">
+    <input name="name" placeholder="Ваше ім'я" required>
+    <input name="phone" placeholder="Телефон" required>
+    <input name="email" placeholder="Email">
+    <textarea name="comment" placeholder="Коментар"></textarea>
+    <button type="submit">Надіслати</button>
+  </form>
+  <h3>Список заявок:</h3>
+  <ul id="appointments-list"></ul>
+</section>
+<!-- ...далі футер і решта коду... -->
+<section>
+  <h2>Залишити заявку на прийом</h2>
+  <form id="appointment-form">
+    <input name="name" placeholder="Ваше ім'я" required>
+    <input name="phone" placeholder="Телефон" required>
+    <input name="email" placeholder="Email">
+    <textarea name="comment" placeholder="Коментар"></textarea>
+    <button type="submit">Надіслати</button>
+  </form>
+  <h3>Список заявок:</h3>
+  <ul id="appointments-list"></ul>
+</section>
+
+<script>
+async function loadAppointments() {
+  const res = await fetch('http://localhost:3001/appointments');
+  const list = await res.json();
+  const ul = document.getElementById('appointments-list');
+  ul.innerHTML = '';
+  list.forEach(item => {
+    ul.innerHTML += `<li><b>${item.name}</b> (${item.phone}) — ${item.comment || ''}</li>`;
+  });
+}
+document.getElementById('appointment-form').onsubmit = async function(e) {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(this));
+  await fetch('http://localhost:3001/appointments', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data)
+  });
+  this.reset();
+  loadAppointments(); // Оновити список після відправки
+};
+loadAppointments(); // Показати заявки при завантаженні сторінки
+</script>
   <!-- Футер -->
   <footer class="site-footer">
     <p>&copy; 2025 Оптика Центр Зору. Усі права захищені.</p>
@@ -57,21 +108,21 @@
   <span class="label">Записатись</span>
 </button>
 
-
 <!-- Модальне вікно -->
 <div id="modal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
     <h2>Записатись на прийом</h2>
-    <form class="appointment-form">
-      <input type="text" placeholder="Ваше ім’я" required />
-      <input type="tel" placeholder="Номер телефону" required />
-      <input type="email" placeholder="Email (необов’язково)" />
-      <textarea placeholder="Коментар або питання..." rows="4"></textarea>
+    <form class="appointment-form" id="modal-appointment-form">
+      <input type="text" name="name" placeholder="Ваше ім’я" required />
+      <input type="tel" name="phone" placeholder="Номер телефону" required />
+      <input type="email" name="email" placeholder="Email (необов’язково)" />
+      <textarea name="comment" placeholder="Коментар або питання..." rows="4"></textarea>
       <button type="submit">Надіслати</button>
     </form>
   </div>
 </div>
+
 <script>
   function openModal() {
     document.getElementById("modal").style.display = "block";
